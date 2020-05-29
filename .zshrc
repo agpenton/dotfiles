@@ -13,14 +13,24 @@ export CLICOLOR_FORCE=1
 unsetopt nomatch
 
 # Nicer prompt.
-export PS1=$'\n'"%F{green} %*%F %3~ %F{white}$ "
+#export PS1=$'\n'"%F{green} %*%F %3~ %F{white}$ "
+export PS1=$'\n'"%F{green}%*%f" ♚ %F{red}%m%f:%F{blue}[%f%F{blue}%1d%f%F{blue}]%f$ "\
 
 # Enable plugins.
-plugins=(git brew history kubectl history-substring-search)
+plugins=(ansible aws bundler iterm2 kitchen ruby rsync vagrant git brew history kubectl history-substring-search)
 
 # Custom $PATH with extra locations.
 export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/go/bin:/usr/local/git/bin:$HOME/.composer/vendor/bin:$PATH
-
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/Users/agpenton/Library/Python/3.8/bin:${PATH}
+export LDFLAGS="-L/usr/local/opt/libffi/lib"
+export CPPFLAGS="-I/usr/local/opt/libffi/include"
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export LDFLAGS="-L/usr/local/opt/readline/lib"
+export CPPFLAGS="-I/usr/local/opt/readline/include"
+export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+export CPPFLAGS="-I/usr/local/opt/sqlite/include"
 # Bash-style time output.
 export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
 
